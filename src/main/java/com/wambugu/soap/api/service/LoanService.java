@@ -2,6 +2,7 @@ package com.wambugu.soap.api.service;
 
 import com.wambugu.wambugu.soap.api.loaneligibility.CustomerRequest;
 import com.wambugu.wambugu.soap.api.loaneligibility.CustomerResponse;
+import com.wambugu.wambugu.soap.api.loaneligibility.ObjectFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.List;
 public class LoanService {
 
     public CustomerResponse response(CustomerRequest customerRequest){
-        CustomerResponse response=new CustomerResponse();
+        CustomerResponse response=new ObjectFactory().createCustomerResponse();
         List<String> list=new ArrayList<>();
         list.add("123");
         list.add("456");
