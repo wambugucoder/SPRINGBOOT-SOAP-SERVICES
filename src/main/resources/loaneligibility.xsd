@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.wambugu.com/wambugu/soap/api/loaneligibility"
+        elementFormDefault="qualified"
+        xmlns:tns="http://www.wambugu.com/wambugu/soap/api/loaneligibility">
+
+    <xsd:element name="CustomerRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="CustomerName" type="xsd:string"/>
+                <xsd:element name="Age" type="xsd:int"/>
+                <xsd:element name="Salary" type="xsd:int"/>
+
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="CustomerResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Eligible" type="xsd:boolean"/>
+                <xsd:element name="RandomId" type="xsd:string" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</schema>
