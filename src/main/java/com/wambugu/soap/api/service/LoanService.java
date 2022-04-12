@@ -18,8 +18,8 @@ public class LoanService {
         list.add("456");
         response.setEligible(false);
         response.setRandomId(list);
-        CustomerResponse responseq=new CustomerResponse();
-        responseq.setEligible(true);
+
+        CustomerResponse responseq=new ObjectFactory().createCustomerResponse();
         responseq.setRandomId(list);
 
       return customerRequest.getSalary()<=40000?response:responseq;
